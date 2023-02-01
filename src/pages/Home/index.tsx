@@ -1,37 +1,16 @@
 /* eslint-disable react/style-prop-object */
 /* eslint-disable jsx-a11y/alt-text */
 import { useState } from "react";
-import reactLogo from "../../assets/reactLogo.png";
-import { Card } from "../../utils/Utility";
-const array = [
-  {
-    id: "newComponent",
-    label: "New Component",
-    command: "npm",
-  },
-  {
-    id: "newService",
-    label: "New Service",
-    command: "npm service",
-  },
-  {
-    id: "runServer",
-    label: "Run Server",
-    command: "npm start",
-  },
-  {
-    id: "addDependency",
-    label: "Add Dependency",
-    command: "npm install dependency name",
-  },
-];
-const array1 = [1, 2, 3];
+import { Resources } from "../../config/Resources";
+import Card from "../../components/shared/Card";
+import { array } from "../../helpers/Home";
+
 const Home = () => {
   const [selectedButton, setSelectedButton] = useState<string>("");
   return (
     <div className="w-4/5 h-[90vh] overflow-y-auto bg-white text-lightWhite">
       <div className="bg-lightBluish h-16 flex items-center w-full fixed">
-        <img src={reactLogo} className="h-10 w-12 pl-3" />
+        <img src={Resources.images.ReactLogo} className="h-10 w-12 pl-3" />
         <p className="text-center pl-3 text-white">
           {"welcome to react boiler plate".toUpperCase()}
         </p>
@@ -89,7 +68,9 @@ const Home = () => {
         </div>
         <div className="text-center mt-2">
           <div className="text-lg font-medium text-black">Resources</div>
-          <div className="text-sm">Here are some links to help you get started:</div>
+          <div className="text-sm">
+            Here are some links to help you get started:
+          </div>
           <div className="card-container flex flex-wrap mt-4 ">
             <a
               className="card m-4 text-xs card-small items-center justify-center flex w-48 h-12 border border-slate-900/10 mx-3 hover:scale-110 hover:shadow-cardShadow transition ease-in-out delay-200"

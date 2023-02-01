@@ -1,13 +1,11 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import  { useEffect, useState } from "react";
-import {
-  CustomCard,
-  CustomPagination,
-  CustomSearch,
-  CustomSelect,
-} from "../../utils/Utility";
+import { useEffect, useState } from "react";
+import CustomCard from "../../components/shared/CustomCard";
+import  CustomPagination  from "../../components/shared/CustomPagination";
+import  CustomSearch  from "../../components/shared/CustomSearch";
+import  CustomSelect  from "../../components/shared/CustomSelect";
 import "react-select-search/style.css";
 import { useQuery } from "react-query";
 import { getUserData } from "../../services/UserData";
@@ -87,6 +85,7 @@ const Details = () => {
         <CustomPagination
           count={userData && Math.ceil(userData.length / itemsPerPage)}
           setPageNumber={setPageNumber}
+          pageNumber={pageNumber}
         />
       </div>
     </div>

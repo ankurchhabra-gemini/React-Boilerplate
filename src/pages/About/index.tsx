@@ -1,5 +1,5 @@
 import React from 'react'
-import {CustomSearch} from '../../utils/Utility'
+import CustomSearch from '../../components/shared/CustomSearch'
 
 const About = () => {
   return (

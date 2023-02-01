@@ -3,8 +3,8 @@ import "./App.css";
 import Theme from "./config/Theme";
 import { routes } from "./config/Routes";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import SideBar from "./components/SideBar";
+import NavBar from "./components/shared/NavBar";
+import SideBar from "./components/shared/SideBar";
 function App() {
   return (
     <Theme>
@@ -24,5 +24,4 @@ function App() {
     </Theme>
   );
 }
-
 export default App;
