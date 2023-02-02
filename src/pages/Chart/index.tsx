@@ -1,5 +1,5 @@
-import React from "react";
-import CustomSearch from "../../components/shared/CustomSearch";
+import React from 'react';
+import CustomSearch from '../../components/shared/CustomSearch';
 
 const Chart = () => {
   return (

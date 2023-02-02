@@ -1,19 +1,20 @@
-import { useEffect, useState, useRef } from "react";
-import ClickAwayListener from "@mui/material/ClickAwayListener";
-import Grow from "@mui/material/Grow";
-import Paper from "@mui/material/Paper";
-import Popper from "@mui/material/Popper";
-import MenuItem from "@mui/material/MenuItem";
-import MenuList from "@mui/material/MenuList";
-import Stack from "@mui/material/Stack";
-import { MdOutlineArrowDropDown } from "react-icons/md";
-import { IoMdContact } from "react-icons/io";
-import { IconContext } from "react-icons";
+import { useEffect, useState, useRef } from 'react';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
+import Grow from '@mui/material/Grow';
+import Paper from '@mui/material/Paper';
+import Popper from '@mui/material/Popper';
+import MenuItem from '@mui/material/MenuItem';
+import MenuList from '@mui/material/MenuList';
+import Stack from '@mui/material/Stack';
+import { MdOutlineArrowDropDown } from 'react-icons/md';
+import { IoMdContact } from 'react-icons/io';
+import { IconContext } from 'react-icons';
 
 const MenuListComposition = () => {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef<HTMLButtonElement>(null);
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [colors, setColors] = useState({ color: '#17A2B8', size: '50px' });
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
@@ -30,10 +31,10 @@ const MenuListComposition = () => {
   };
 
   function handleListKeyDown(event: React.KeyboardEvent) {
-    if (event.key === "Tab") {
+    if (event.key === 'Tab') {
       event.preventDefault();
       setOpen(false);
-    } else if (event.key === "Escape") {
+    } else if (event.key === 'Escape') {
       setOpen(false);
     }
   }
@@ -51,19 +52,20 @@ const MenuListComposition = () => {
     <Stack direction="row" spacing={2}>
       <div>
         <div className="flex">
-          <IconContext.Provider value={{ color: "#17A2B8" }}>
+          <IconContext.Provider value={{ color: '#17A2B8' }}>
             <IoMdContact className="h-7 w-7" />
           </IconContext.Provider>
 
           <button
+            type="button"
             ref={anchorRef}
             id="composition-button"
-            aria-controls={open ? "composition-menu" : undefined}
-            aria-expanded={open ? "true" : undefined}
+            aria-controls={open ? 'composition-menu' : undefined}
+            aria-expanded={open ? 'true' : undefined}
             aria-haspopup="true"
             onClick={handleToggle}
           >
-            <IconContext.Provider value={{ color: "#17A2B8", size: "50px" }}>
+            <IconContext.Provider value={colors}>
               <MdOutlineArrowDropDown className="h-4 w-4" />
             </IconContext.Provider>
           </button>
@@ -81,7 +83,7 @@ const MenuListComposition = () => {
               {...TransitionProps}
               style={{
                 transformOrigin:
-                  placement === "bottom-start" ? "left top" : "left bottom",
+                  placement === 'bottom-start' ? 'left top' : 'left bottom',
               }}
             >
               <Paper>

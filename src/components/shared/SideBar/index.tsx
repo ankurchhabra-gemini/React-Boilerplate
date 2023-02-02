@@ -1,7 +1,7 @@
-import React from "react";
-import { IconContext } from "react-icons";
-import { Link } from "react-router-dom";
-import { SideBarData } from "../../../helpers/SideBarData";
+import React from 'react';
+import { IconContext } from 'react-icons';
+import { Link } from 'react-router-dom';
+import { SideBarData } from '../../../helpers/SideBarData';
 
 const SideBar = () => {
   return (
@@ -14,7 +14,7 @@ const SideBar = () => {
           >
             <Link to={path} className="flex items-center">
               <p>
-                <IconContext.Provider value={{ size: "20px" }}>
+                <IconContext.Provider value={{ size: '20px' }}>
                   {icon}
                 </IconContext.Provider>
               </p>

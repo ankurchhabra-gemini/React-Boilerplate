@@ -1,8 +1,8 @@
-const base = "/images";
+const base = '/images';
 
 export const Resources = {
   images: {
-    GeminiLogo:`${base}/Navbar/GeminiLogo.png`,
-    ReactLogo:`${base}/Home/ReactLogo.png`
-  }
-}
+    GeminiLogo: `${base}/Navbar/GeminiLogo.png`,
+    ReactLogo: `${base}/Home/ReactLogo.png`,
+  },
+};

@@ -1,18 +1,18 @@
 /* eslint-disable react/style-prop-object */
 /* eslint-disable jsx-a11y/alt-text */
-import { useState } from "react";
-import { Resources } from "../../config/Resources";
-import Card from "../../components/shared/Card";
-import { array } from "../../helpers/Home";
+import { useState } from 'react';
+import { Resources } from '../../config/Resources';
+import Card from '../../components/shared/Card';
+import { array } from '../../helpers/Home';
 
 const Home = () => {
-  const [selectedButton, setSelectedButton] = useState<string>("");
+  const [selectedButton, setSelectedButton] = useState<string>('');
   return (
     <div className="w-4/5 h-[90vh] overflow-y-auto bg-white text-lightWhite">
       <div className="bg-lightBluish h-16 flex items-center w-full fixed">
         <img src={Resources.images.ReactLogo} className="h-10 w-12 pl-3" />
         <p className="text-center pl-3 text-white">
-          {"welcome to react boiler plate".toUpperCase()}
+          {'welcome to react boiler plate'.toUpperCase()}
         </p>
       </div>
       <div className="flex flex-col items-center w-4/6 m-auto mt-16">
@@ -52,9 +52,9 @@ const Home = () => {
               bg-gray-800  pb-6  rounded-lg leading-normal overflow-hidden"
             >
               <div className="top mb-2 flex">
-                <div className="h-3 w-3 bg-red-500 rounded-full"></div>
-                <div className="ml-2 h-3 w-3 bg-orange-300 rounded-full"></div>
-                <div className="ml-2 h-3 w-3 bg-green-500 rounded-full"></div>
+                <div className="h-3 w-3 bg-red-500 rounded-full" />
+                <div className="ml-2 h-3 w-3 bg-orange-300 rounded-full" />
+                <div className="ml-2 h-3 w-3 bg-green-500 rounded-full" />
               </div>
               <div className="mt-4 flex">
                 <span className="text-green-400">C:\Users\~$</span>
@@ -98,7 +98,7 @@ const Home = () => {
                 fill="#5f5f5f"
               >
                 <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-              </svg>{" "}
+              </svg>{' '}
             </a>
 
             <a
@@ -220,7 +220,7 @@ const Home = () => {
               <svg
                 className="material-icons"
                 xmlns="http://www.w3.org/2000/svg"
-                enable-background="new 0 0 24 24"
+                enableBackground="new 0 0 24 24"
                 height="24px"
                 viewBox="0 0 24 24"
                 width="24px"

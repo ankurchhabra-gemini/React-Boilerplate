@@ -1,4 +1,4 @@
-import { Pagination, Stack } from "@mui/material";
+import { Pagination, Stack } from '@mui/material';
 
 interface Props {
   count: number | undefined;
@@ -10,17 +10,15 @@ const CustomPagination = ({ count, setPageNumber, pageNumber }: Props) => {
     setPageNumber(value);
   };
   return (
-    <>
-      <Stack spacing={2}>
-        <Pagination
-          count={count}
-          variant="outlined"
-          shape="rounded"
-          onChange={handleChange}
-          page={pageNumber}
-        />
-      </Stack>
-    </>
+    <Stack spacing={2}>
+      <Pagination
+        count={count}
+        variant="outlined"
+        shape="rounded"
+        onChange={handleChange}
+        page={pageNumber}
+      />
+    </Stack>
   );
 };
 export default CustomPagination;

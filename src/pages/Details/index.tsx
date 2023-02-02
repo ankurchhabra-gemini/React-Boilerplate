@@ -1,24 +1,24 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useEffect, useState } from "react";
-import CustomCard from "../../components/shared/CustomCard";
-import  CustomPagination  from "../../components/shared/CustomPagination";
-import  CustomSearch  from "../../components/shared/CustomSearch";
-import  CustomSelect  from "../../components/shared/CustomSelect";
-import "react-select-search/style.css";
-import { useQuery } from "react-query";
-import { getUserData } from "../../services/UserData";
-import { USER } from "../../protocols/UserData";
-import { pagesData } from "../../helpers/SideBarData";
+import { useEffect, useState } from 'react';
+import CustomCard from '../../components/shared/CustomCard';
+import CustomPagination from '../../components/shared/CustomPagination';
+import CustomSearch from '../../components/shared/CustomSearch';
+import CustomSelect from '../../components/shared/CustomSelect';
+import 'react-select-search/style.css';
+import { useQuery } from 'react-query';
+import { getUserData } from '../../services/UserData';
+import { USER } from '../../protocols/UserData';
+import { pagesData } from '../../helpers/SideBarData';
 
 const Details = () => {
   const [itemsPerPage, setItemsPerPage] = useState<number>(10);
-  const [userData, setUserData] = useState<USER.USER_RESPONSE["data"]>();
+  const [userData, setUserData] = useState<USER.USER_RESPONSE['data']>();
   const [pageNumber, setPageNumber] = useState<number>(1);
   // const [reset,setReset]=useState<boolean>(false);// this state is when we set  items per page then  it resets to first page
   const [filteredData, setFilteredData] =
-    useState<USER.USER_RESPONSE["data"]>();
+    useState<USER.USER_RESPONSE['data']>();
   useEffect(() => {
     // if(reset===true){
     //   setPageNumber(1);
@@ -44,7 +44,7 @@ const Details = () => {
   }, [itemsPerPage, userData, pageNumber]);
 
   useQuery(
-    ["userData"],
+    ['userData'],
     async () => {
       const data = await getUserData();
       setUserData(data);

@@ -22,7 +22,7 @@ const CustomCard = ({ title, completed, heading, id }: CustomCardProps) => {
         <div>
           <span className="">completed</span>
           <span className="inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            {completed === true ? "true" : "false"}
+            {completed === true ? 'true' : 'false'}
           </span>
         </div>
       </div>

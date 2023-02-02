@@ -1,6 +1,6 @@
-import { Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { Fragment } from 'react';
+import { Menu, Transition } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/20/solid';
 
 interface Props {
   pagesData: number[];
@@ -10,7 +10,7 @@ interface Props {
   // reset: boolean;
 }
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 const CustomSelect = ({
@@ -44,18 +44,19 @@ Props) => {
               return (
                 <Menu.Item key={numberOfPages}>
                   {({ active }: any) => (
-                    <p
+                    <div
                       className={classNames(
-                        active ? "bg-gray-100  text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm "
+                        active ? 'bg-gray-100  text-gray-900' : 'text-gray-700',
+                        'block px-4 py-2 text-sm '
                       )}
+                      role="button"
                       onClick={() => {
                         setItemsPerPage(numberOfPages);
                         // setReset(true);
                       }}
                     >
                       {numberOfPages}
-                    </p>
+                    </div>
                   )}
                 </Menu.Item>
               );
@@ -66,4 +67,4 @@ Props) => {
     </Menu>
   );
 };
-export default CustomSelect
+export default CustomSelect;

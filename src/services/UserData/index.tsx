@@ -1,5 +1,5 @@
-import axios from "axios";
-import { USER } from "../../protocols/UserData";
+import axios from 'axios';
+import { USER } from '../../protocols/UserData';
 
 export const getUserData = async () => {
   try {
@@ -8,6 +8,6 @@ export const getUserData = async () => {
     );
     return response.data;
   } catch ({ response }) {
-    throw new Error("error found");
+    throw new Error('error found');
   }
 };
