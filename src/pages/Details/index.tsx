@@ -28,11 +28,8 @@ const Details = () => {
       setPageNumber(Math.ceil(userData.length / itemsPerPage));
     }
     setFilteredData(
+      // eslint-disable-next-line consistent-return
       userData?.filter((curr, index, data) => {
-        console.log(
-          itemsPerPage * pageNumber - itemsPerPage - 1,
-          itemsPerPage * pageNumber
-        );
         if (
           index > itemsPerPage * pageNumber - itemsPerPage - 1 &&
           index < itemsPerPage * pageNumber

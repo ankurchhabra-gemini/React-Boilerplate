@@ -1,9 +1,9 @@
 /* eslint-disable react/style-prop-object */
 /* eslint-disable jsx-a11y/alt-text */
 import { useState } from 'react';
-import { Resources } from '../../config/Resources';
+import Resources from '../../config/Resources';
 import Card from '../../components/shared/Card';
-import { array } from '../../helpers/Home';
+import array from '../../helpers/Home';
 
 const Home = () => {
   const [selectedButton, setSelectedButton] = useState<string>('');
@@ -23,7 +23,8 @@ const Home = () => {
           {array.map(({ label, id, command }) => {
             return (
               <div
-                onClick={(e) => {
+                role="presentation"
+                onClick={() => {
                   setSelectedButton(command);
                 }}
               >
@@ -36,7 +37,8 @@ const Home = () => {
           {array.map(({ label, id, command }) => {
             return (
               <div
-                onClick={(e) => {
+                role="presentation"
+                onClick={() => {
                   setSelectedButton(command);
                 }}
               >

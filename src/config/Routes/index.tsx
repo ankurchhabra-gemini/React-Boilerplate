@@ -9,7 +9,7 @@ import Loader from '../../pages/Loader';
 import LogIn from '../../pages/LogIn';
 import Pipe from '../../pages/Pipe';
 
-export const routes = [
+const routes = [
   {
     id: 'home',
     path: '/pages/home',
@@ -61,3 +61,4 @@ export const routes = [
     path: '/pages/about',
   },
 ];
+export default routes;

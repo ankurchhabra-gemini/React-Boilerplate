@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { Resources } from '../../../config/Resources';
+import Resources from '../../../config/Resources';
 import MenuListComposition from '../MenuListComposition';
 
 const NavBar = () => {
