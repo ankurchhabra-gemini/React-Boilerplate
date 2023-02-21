@@ -20,4 +20,5 @@ const array = [
     command: 'npm install dependency name',
   },
 ];
+
 export default array;

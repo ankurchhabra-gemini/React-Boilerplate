@@ -3,7 +3,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 interface Props {
   children: JSX.Element | JSX.Element[];
 }
-const Theme = (props: Props) => {
+const Theme = ({ children }: Props) => {
   const theme = createTheme({
     palette: {
       primary: {
@@ -27,7 +27,7 @@ const Theme = (props: Props) => {
   });
 
   // eslint-disable-next-line react/destructuring-assignment
-  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 
 export default Theme;
