@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { USER } from '../../protocols/UserData';
 
-export const getUserData = async () => {
+const getUserData = async () => {
   try {
     const response: USER.USER_RESPONSE = await axios.get(
       `https://jsonplaceholder.typicode.com/todos`
@@ -11,3 +11,5 @@ export const getUserData = async () => {
     throw new Error('error found');
   }
 };
+
+export default getUserData;

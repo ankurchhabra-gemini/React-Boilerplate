@@ -8,7 +8,7 @@ import CustomSearch from '../../components/shared/CustomSearch';
 import CustomSelect from '../../components/shared/CustomSelect';
 import 'react-select-search/style.css';
 import { useQuery } from 'react-query';
-import { getUserData } from '../../services/UserData';
+import getUserData from '../../services/UserData';
 import { USER } from '../../protocols/UserData';
 import { pagesData } from '../../helpers/SideBarData';
 
@@ -81,7 +81,7 @@ const Details = () => {
           );
         })}
       </div>
-      <div className="mt-10 flex justify-center">
+      <div className="flex justify-center mt-10">
         <CustomPagination
           count={userData && Math.ceil(userData.length / itemsPerPage)}
           setPageNumber={setPageNumber}

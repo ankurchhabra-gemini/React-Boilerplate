@@ -9,21 +9,21 @@ const Home = () => {
   const [selectedButton, setSelectedButton] = useState<string>('');
   return (
     <div className="w-4/5 h-[90vh] overflow-y-auto bg-white text-lightWhite">
-      <div className="bg-lightBluish h-16 flex items-center w-full fixed">
-        <img src={Resources.images.ReactLogo} className="h-10 w-12 pl-3" />
-        <p className="text-center pl-3 text-white">
+      <div className="fixed flex items-center w-full h-16 bg-lightBluish">
+        <img src={Resources.images.ReactLogo} className="w-12 h-10 pl-3" />
+        <p className="pl-3 text-center text-white">
           {'welcome to react boiler plate'.toUpperCase()}
         </p>
       </div>
       <div className="flex flex-col items-center w-4/6 m-auto mt-16">
-        <p className="font-medium text-xl mt-5 text-black">
+        <p className="mt-5 text-xl font-medium text-black">
           What do you want to do next with your app?
         </p>
-        <div className="flex  mt-8 justify-center">
+        <div className="flex justify-center mt-8">
           {array.map(({ label, id, command }) => {
             return (
               <div
-                onClick={(e) => {
+                onClick={() => {
                   setSelectedButton(command);
                 }}
               >
@@ -32,11 +32,11 @@ const Home = () => {
             );
           })}
         </div>
-        <div className="flex  mt-8">
+        <div className="flex mt-8">
           {array.map(({ label, id, command }) => {
             return (
               <div
-                onClick={(e) => {
+                onClick={() => {
                   setSelectedButton(command);
                 }}
               >
@@ -47,18 +47,15 @@ const Home = () => {
         </div>
         <div className="w-[90%] mt-6">
           <div className="w-full">
-            <div
-              className="coding inverse-toggle px-5 pt-4 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased 
-              bg-gray-800  pb-6  rounded-lg leading-normal overflow-hidden"
-            >
-              <div className="top mb-2 flex">
-                <div className="h-3 w-3 bg-red-500 rounded-full" />
-                <div className="ml-2 h-3 w-3 bg-orange-300 rounded-full" />
-                <div className="ml-2 h-3 w-3 bg-green-500 rounded-full" />
+            <div className="px-5 pt-4 pb-6 overflow-hidden font-mono text-sm subpixel-antialiased leading-normal text-gray-100 bg-gray-800 rounded-lg shadow-lg coding inverse-toggle">
+              <div className="flex mb-2 top">
+                <div className="w-3 h-3 bg-red-500 rounded-full" />
+                <div className="w-3 h-3 ml-2 bg-orange-300 rounded-full" />
+                <div className="w-3 h-3 ml-2 bg-green-500 rounded-full" />
               </div>
-              <div className="mt-4 flex">
+              <div className="flex mt-4">
                 <span className="text-green-400">C:\Users\~$</span>
-                <p className="flex-1 typing items-center pl-2">
+                <p className="items-center flex-1 pl-2 typing">
                   {selectedButton}
                   <br />
                 </p>
@@ -66,14 +63,14 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="text-center mt-2">
+        <div className="mt-2 text-center">
           <div className="text-lg font-medium text-black">Resources</div>
           <div className="text-sm">
             Here are some links to help you get started:
           </div>
-          <div className="card-container flex flex-wrap mt-4 ">
+          <div className="flex flex-wrap mt-4 card-container ">
             <a
-              className="card m-4 text-xs card-small items-center justify-center flex w-48 h-12 border border-slate-900/10 mx-3 hover:scale-110 hover:shadow-cardShadow transition ease-in-out delay-200"
+              className="flex items-center justify-center w-48 h-12 m-4 mx-3 text-xs transition ease-in-out delay-200 border card card-small border-slate-900/10 hover:scale-110 hover:shadow-cardShadow"
               target="_blank"
               rel="noopener noreferrer"
               href="https://angular.io/tutorial"
@@ -102,7 +99,7 @@ const Home = () => {
             </a>
 
             <a
-              className="card m-4 text-xs card-small items-center justify-center flex w-48 h-12 border border-slate-900/10 mx-3 hover:scale-110 hover:shadow-cardShadow transition ease-in-out delay-200"
+              className="flex items-center justify-center w-48 h-12 m-4 mx-3 text-xs transition ease-in-out delay-200 border card card-small border-slate-900/10 hover:scale-110 hover:shadow-cardShadow"
               target="_blank"
               rel="noopener noreferrer"
               href="https://angular.io/cli"
@@ -131,7 +128,7 @@ const Home = () => {
             </a>
 
             <a
-              className="card m-4 text-xs card-small items-center justify-center flex w-48 h-12 border border-slate-900/10 mx-3 hover:scale-110 hover:shadow-cardShadow transition ease-in-out delay-200"
+              className="flex items-center justify-center w-48 h-12 m-4 mx-3 text-xs transition ease-in-out delay-200 border card card-small border-slate-900/10 hover:scale-110 hover:shadow-cardShadow"
               target="_blank"
               rel="noopener noreferrer"
               href="https://material.angular.io"
@@ -183,7 +180,7 @@ const Home = () => {
             </a>
 
             <a
-              className="card m-4 text-xs card-small items-center justify-center flex w-48 h-12 border border-slate-900/10 mx-3 hover:scale-110 hover:shadow-cardShadow transition ease-in-out delay-200"
+              className="flex items-center justify-center w-48 h-12 m-4 mx-3 text-xs transition ease-in-out delay-200 border card card-small border-slate-900/10 hover:scale-110 hover:shadow-cardShadow"
               target="_blank"
               rel="noopener noreferrer"
               href="https://blog.angular.io/"
@@ -212,7 +209,7 @@ const Home = () => {
             </a>
 
             <a
-              className="card m-4 text-xs card-small items-center justify-center flex w-48 h-12 border border-slate-900/10 mx-3 hover:scale-110 hover:shadow-cardShadow transition ease-in-out delay-200"
+              className="flex items-center justify-center w-48 h-12 m-4 mx-3 text-xs transition ease-in-out delay-200 border card card-small border-slate-900/10 hover:scale-110 hover:shadow-cardShadow"
               target="_blank"
               rel="noopener noreferrer"
               href="https://angular.io/devtools/"

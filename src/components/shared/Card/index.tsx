@@ -3,7 +3,10 @@ interface Props {
 }
 const Card = ({ message }: Props) => {
   return (
-    <button className="text-xs card card-small items-center justify-center flex w-48 h-12 border border-slate-900/10 mx-3 hover:scale-110 hover:shadow-cardShadow transition ease-in-out delay-200">
+    <button
+      type="button"
+      className="flex items-center justify-center w-48 h-12 mx-3 text-xs transition ease-in-out delay-200 border card card-small border-slate-900/10 hover:scale-110 hover:shadow-cardShadow"
+    >
       <svg
         className="material-icons"
         xmlns=""
