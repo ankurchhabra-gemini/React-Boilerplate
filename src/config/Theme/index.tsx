@@ -26,6 +26,7 @@ const Theme = (props: Props) => {
     },
   });
 
+  // eslint-disable-next-line react/destructuring-assignment
   return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
 };
 

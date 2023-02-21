@@ -1,4 +1,4 @@
-export const array = [
+const array = [
   {
     id: 'newComponent',
     label: 'New Component',
@@ -20,3 +20,4 @@ export const array = [
     command: 'npm install dependency name',
   },
 ];
+export default array;

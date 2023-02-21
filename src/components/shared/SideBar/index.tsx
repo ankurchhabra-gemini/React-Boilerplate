@@ -1,5 +1,4 @@
 import React from 'react';
-import { IconContext } from 'react-icons';
 import { Link } from 'react-router-dom';
 import { SideBarData } from '../../../helpers/SideBarData';
 
@@ -13,11 +12,7 @@ const SideBar = () => {
             key={id}
           >
             <Link to={path} className="flex items-center">
-              <p>
-                <IconContext.Provider value={{ size: '20px' }}>
-                  {icon}
-                </IconContext.Provider>
-              </p>
+              <p>{icon}</p>
               <p className="pl-1">{label}</p>
             </Link>
           </div>
