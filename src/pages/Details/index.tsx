@@ -13,7 +13,7 @@ import { USER } from '../../protocols/UserData';
 import { pagesData } from '../../helpers/SideBarData';
 
 const Details = () => {
-  const [itemsPerPage, setItemsPerPage] = useState<number>(10);
+  const [itemsPerPage, setItemsPerPage] = useState<string>('10');
   const [userData, setUserData] = useState<USER.USER_RESPONSE['data']>();
   const [pageNumber, setPageNumber] = useState<number>(1);
   // const [reset,setReset]=useState<boolean>(false);// this state is when we set  items per page then  it resets to first page
@@ -24,15 +24,18 @@ const Details = () => {
     //   setPageNumber(1);
     //   setReset(false);
     // }
-    if (userData && itemsPerPage * pageNumber > userData.length) {
-      setPageNumber(Math.ceil(userData.length / itemsPerPage));
+    if (userData && parseInt(itemsPerPage, 10) * pageNumber > userData.length) {
+      setPageNumber(Math.ceil(userData.length / parseInt(itemsPerPage, 10)));
     }
     setFilteredData(
       // eslint-disable-next-line consistent-return
       userData?.filter((curr, index, data) => {
         if (
-          index > itemsPerPage * pageNumber - itemsPerPage - 1 &&
-          index < itemsPerPage * pageNumber
+          index >
+            parseInt(itemsPerPage, 10) * pageNumber -
+              parseInt(itemsPerPage, 10) -
+              1 &&
+          index < parseInt(itemsPerPage, 10) * pageNumber
         ) {
           return data[index];
         }
@@ -80,7 +83,9 @@ const Details = () => {
       </div>
       <div className="mt-10 flex justify-center">
         <CustomPagination
-          count={userData && Math.ceil(userData.length / itemsPerPage)}
+          count={
+            userData && Math.ceil(userData.length / parseInt(itemsPerPage, 10))
+          }
           setPageNumber={setPageNumber}
           pageNumber={pageNumber}
         />

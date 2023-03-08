@@ -3,9 +3,9 @@ import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 
 interface Props {
-  pagesData: number[];
-  itemsPerPage: number;
-  setItemsPerPage: (val: number) => void;
+  pagesData: string[];
+  itemsPerPage: string;
+  setItemsPerPage: (val: string) => void;
   // setReset: (val: boolean) => void;
   // reset: boolean;
 }
@@ -21,7 +21,10 @@ const CustomSelect = ({
 // reset,
 Props) => {
   return (
-    <Menu as="div" className="relative inline-block text-left ml-6">
+    <Menu
+      as="div"
+      className="relative inline-block text-left  w-4/5 outline-none"
+    >
       <div>
         <Menu.Button className="inline-flex w-full justify-center  rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
           {itemsPerPage}

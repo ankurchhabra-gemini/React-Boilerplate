@@ -9,7 +9,9 @@ module.exports = {
         green: '#FFC0CB',
         lightBluish:"#17A2B8",
         darkWhite:"#f3fbf5",
-        lightWhite:"#5f5f5f"
+        lightWhite:"#5f5f5f",
+        Bittersweet:"#FF5A5A",
+        
       },
       width: {
         53.5: '13.375rem',
@@ -21,7 +23,8 @@ module.exports = {
         Default:'1px'
       },
       boxShadow:{
-        cardShadow:'0 2px 15px -3px rgb(0 0 0 / 57%)'
+        cardShadow:'0 2px 15px -3px rgb(0 0 0 / 57%)',
+        formCardShadow:'2px 15px -3px rgb(0 0 0 / 7%), 0 10px 20px -2px rgb(0 0 0 / 4%)'
       }
     },
   },

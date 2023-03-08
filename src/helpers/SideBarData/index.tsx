@@ -76,4 +76,4 @@ export const SideBarData = [
   },
 ];
 
-export const pagesData = [10, 20, 30];
+export const pagesData = ['10', '20', '30'];
